@@ -1,12 +1,12 @@
+//Hides about me content until button click
+    $(".wrapper").hide();
+    //Hides contact me content until button click
+    $(".contactDiv").hide();
 //Waits for HTML to load before running anything
 $(document).ready(function() {
     //Hiding project divs at start to cycle through later
     $(".GifTastic").hide();
     $(".Office-Trivia").hide();
-    //Hides about me content until button click
-    $(".wrapper").hide();
-    //Hides contact me content until button click
-    $(".contactDiv").hide();
     //Assigning variables to each about div and hiding it for animation later
     const aboutMe = $(".aboutMe");
     aboutMe.hide();
