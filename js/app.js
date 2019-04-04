@@ -23,18 +23,15 @@ $(document).ready(function () {
         setTimeout(contactDiv, 3000);
         setTimeout(portfolioDiv, 2000);
     });
-
     function aboutDiv() {
         aboutMe.addClass("animated fadeInRight slow");
         aboutMe.show();
     };
-
     function contactDiv() {
         onlineInfo.addClass("animated fadeInUp slow");
         onlineInfo.show()
     };
     setTimeout(projectSwap, 3000);
-
     function portfolioDiv() {
         portfolio.addClass("animated fadeInRight slow");
         portfolio.show();
