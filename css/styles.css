@@ -6,6 +6,8 @@ body {
     background-image: url("https://i.gifer.com/2RNf.gif");
     overflow: auto;
     overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
 }
 /*Text inside introDiv styling*/
 .myName, .mySkill {
@@ -29,9 +31,8 @@ body {
 }
 /*Hover effect for button added due to default border and background being removed*/
 .aboutBtn:hover {
-    transition: color, font-size 0.5s;
+    transition: color, 0.5s;
     color: #4aaaa5;
-    font-size: large;
 }
 /*Fonts*/
 h1, h2, h3 {
@@ -61,8 +62,9 @@ img {
     padding: 1%;
 }
 .name {
-    color: #4aaaa5;
     text-align: center;
+    color: #4aaaa5;
+    border-bottom: darkolivegreen 2px solid;
 }
 /*Container for about page content*/
 .wrapper {
@@ -104,13 +106,21 @@ img {
 }
 /*Online profiles div, contains button to migrate to contact page*/
 .onlineInfo {
-    width: 40%;
-    line-height: 1.5;
+    position: relative;
+}
+/*Links within onlineInfo div*/
+.onlineInfo a, .onlineInfo h3, .contactBtn h3 {
     display: inline-block;
-    background-color: black;
-    margin: 1% auto;
-    padding: 1%;
-    border: darkolivegreen 5px solid;
+}
+/*Online profiles div, contains button to migrate to contact page*/
+.onlineInfo2 {
+    color: #4aaaa5;
+    position: relative;
+    text-align: center;
+}
+/*Links within onlineInfo div*/
+.onlineInfo2 a, .onlineInfo2 h3, .contactBtn h3 {
+    display: inline-block;
 }
 /*Button that migrates to contact page, removed default background and border*/
 .contactBtn {
@@ -120,9 +130,9 @@ img {
 }
 /*Added hover to compensate default appearance change*/
 .contactBtn:hover {
-    transition: color, font-size 0.5s;
+    transition: color 0.5s;
     color: white;
-    font-size: large;
+
 }
 /*Div that contains contact form*/
 .contactForm {
@@ -135,6 +145,7 @@ img {
     width: 60%;
     line-height: 1.5;
     text-align: center;
+    flex: 1 0 auto;
 }
 form {
     text-align: left;
@@ -160,9 +171,8 @@ label {
 }
 /*Hover effects for submit button*/
 .submitBtn:hover {
-    transition: color, font-size 0.5s;
+    transition: color 0.5s;
     color: white;
-    font-size: large;
 }
 /*Home btn to return from contact page*/
 .homeBtn {
@@ -173,9 +183,8 @@ label {
 }
 /*Hover effects for home button*/
 .homeBtn:hover {
-    transition: color, font-size 0.5s;
+    transition: color 0.5s;
     color: darkred;
-    font-size: large;
 }
 a {
     text-decoration: none;
@@ -183,9 +192,26 @@ a {
 }
 /*Hover effects for links*/
 a:hover {
-    transition: color, font-size 0.8s;
+    transition: color 0.8s;
     color: darkorchid;
-    font-size: x-large;
+}
+footer {
+    color: #4aaaa5;
+    border-top: darkolivegreen 5px solid;
+    border-bottom: darkolivegreen 5px solid;
+    background-color: black;
+    padding: 1%;
+    text-align: center;
+    flex-shrink: 0;
+}
+.footer {
+    position: relative;
+    top: 300px;
+}
+@media screen and (max-width: 1360px) {
+    .portfolio {
+        width: 50%;
+    }
 }
 @media screen and (max-width: 980px) {
     .introDiv {
@@ -198,12 +224,7 @@ a:hover {
         margin: 1% auto;
     }
     .portfolio {
-        width: 80%;
-        float: none;
-        margin: 1% auto;
-    }
-    .onlineInfo {
-        width: 80%;
+        width: 90%;
         float: none;
         margin: 1% auto;
     }
@@ -222,11 +243,6 @@ a:hover {
         margin: 1% auto;
     }
     .portfolio {
-        width: 90%;
-        float: none;
-        margin: 1% auto;
-    }
-    .onlineInfo {
         width: 90%;
         float: none;
         margin: 1% auto;
