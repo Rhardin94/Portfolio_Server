@@ -45,7 +45,7 @@ $(document).ready(function () {
       },
       liriApp = {
         image: $("<img src='assets/images/liri.jpg'>"),
-        name: $("<h2>").text("Liri!"),
+        name: $("<h2>").text("L.I.R.I!"),
         deployed: $("<a href='https://drive.google.com/file/d/1TDuus6k-dMUWgKzbpJ6GsKnQ-r6s4B18/view' target='_blank'>").html("<h3> Link to Demo! </h3>"),
         repo: $("<a href='https://github.com/Rhardin94/Liri-Node-App' target='_blank'>").html("<h3> Link to Repo! </h3>")
       },
