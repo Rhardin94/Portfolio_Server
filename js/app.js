@@ -38,8 +38,8 @@ $(document).ready(function () {
     //const tempArray = [];
     const pastProjects = [
       bamazonApp = {
-        image: $("<img src='assets/iamges/bamazonJPG.jpg"),
-        name: $("<h2>").tet("Bamazon!"),
+        image: $("<img src='assets/images/bamazon.jpg'>"),
+        name: $("<h2>").text("Bamazon!"),
         deployed: $("<a href='https://drive.google.com/file/d/1Y4ZtCnFz6rCUDe69aqrM64HyLaljF393/view?usp=sharing' target='_blank'>").html("<h3> Link to Demo! </h3>"),
         repo: $("<a href='https://github.com/Rhardin94/Bamazon_NOT_Amazon' target='_blank'>").html("<h3> Link to Repo! </h3>")
       },
