@@ -40,8 +40,8 @@ $(document).ready(function () {
       burgerMeister = {
         image: $("<img src='assets/images/burger.png'>"),
         name: $("<h2>").text("Burger Meister!"),
-        deployed: $("<a href='https://stark-forest-59222.herokuapp.com/' target='_blank'>").html("<h3 Link to Deployed Site! </h3>"),
-        repo: $("<a href='https://github.com/Rhardin94/Burger_Meister' target='_blank'>").html("<h3 Link to Repo! </h3>")
+        deployed: $("<a href='https://stark-forest-59222.herokuapp.com/' target='_blank'>").html("<h3> Link to Deployed Site! </h3>"),
+        repo: $("<a href='https://github.com/Rhardin94/Burger_Meister' target='_blank'>").html("<h3> Link to Repo! </h3>")
       },
       bamazonApp = {
         image: $("<img src='assets/images/bamazon.jpg'>"),
