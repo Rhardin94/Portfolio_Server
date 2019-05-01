@@ -37,30 +37,36 @@ $(document).ready(function () {
     function projectSwap() {
         //const tempArray = [];
         const pastProjects = [
-            liriApp = {
-                image: $("<img src='assets/images/liri.jpg'>"),
-                name: $("<h2>").text("Liri!"),
-                deployed: $("<a href='https://drive.google.com/file/d/1TDuus6k-dMUWgKzbpJ6GsKnQ-r6s4B18/view' target='_blank'>").html("<h3> Link to Demo! </h3>"),
-                repo: $("<a href='https://github.com/Rhardin94/Liri-Node-App' target='_blank'>").html("<h3> Link to Repo! </h3>")
-            },
-            nerdLator = {
-                image: $("<img src='assets/images/Nerd-lator.png'>"),
-                name: $("<h2>").text("Nerd-Lator!"),
-                deployed: $("<a href='https://rhardin94.github.io/Nerd-Lator/' target='_blank'>").html("<h3> Link to Deployed Site! </h3>"),
-                repo: $("<a href='https://github.com/Rhardin94/Nerd-Lator' target='_blank'>").html("<h3> Link to Repo! </h3>")
-            },
-            gifTastic = {
-                image: $("<img src='assets/images/gif.png'>"),
-                name: $("<h2>").text("GifTastic!"),
-                deployed: $("<a href='https://rhardin94.github.io/GifTastic/' target='_blank'>").html("<h3> Link to Deployed Site! </h3>"),
-                repo: $("<a href='https://github.com/Rhardin94/GifTastic' target='_blank'>").html("<h3> Link to Repo! </h3>")
-            },
-            officeTrivia = {
-                image: $("<img src='assets/images/office.png'>"),
-                name: $("<h2>").text("Office Trivia!"),
-                deployed: $("<a href='https://rhardin94.github.io/Office-Trivia/' target='_blank'>").html("<h3> Link to Deployed Site!"),
-                repo: $("<a href='https://github.com/Rhardin94/Office-Trivia' target='_blank'>").html("<h3> Link to Repo! </h3>")
-            }
+          burgerMeister = {
+            image: $("<img src-'assets/images/burger.png'>"),
+            name: $("<h2>").text("Burger Mesiter!"),
+            deployed: $("<a href='https://stark-forest-59222.herokuapp.com/' target='_blank'>").html("<h3> Link to Deployed Site! </h3>"),
+            repo: $("<a href='https://github.com/Rhardin94/Burger_Meister' target='_blank'>").html("<h3> Link to Repo! </h3>")
+          },
+          liriApp = {
+              image: $("<img src='assets/images/liri.jpg'>"),
+              name: $("<h2>").text("Liri!"),
+              deployed: $("<a href='https://drive.google.com/file/d/1TDuus6k-dMUWgKzbpJ6GsKnQ-r6s4B18/view' target='_blank'>").html("<h3> Link to Demo! </h3>"),
+              repo: $("<a href='https://github.com/Rhardin94/Liri-Node-App' target='_blank'>").html("<h3> Link to Repo! </h3>")
+          },
+          nerdLator = {
+              image: $("<img src='assets/images/Nerd-lator.png'>"),
+              name: $("<h2>").text("Nerd-Lator!"),
+              deployed: $("<a href='https://rhardin94.github.io/Nerd-Lator/' target='_blank'>").html("<h3> Link to Deployed Site! </h3>"),
+              repo: $("<a href='https://github.com/Rhardin94/Nerd-Lator' target='_blank'>").html("<h3> Link to Repo! </h3>")
+          },
+          gifTastic = {
+              image: $("<img src='assets/images/gif.png'>"),
+              name: $("<h2>").text("GifTastic!"),
+              deployed: $("<a href='https://rhardin94.github.io/GifTastic/' target='_blank'>").html("<h3> Link to Deployed Site! </h3>"),
+              repo: $("<a href='https://github.com/Rhardin94/GifTastic' target='_blank'>").html("<h3> Link to Repo! </h3>")
+          },
+          officeTrivia = {
+              image: $("<img src='assets/images/office.png'>"),
+              name: $("<h2>").text("Office Trivia!"),
+              deployed: $("<a href='https://rhardin94.github.io/Office-Trivia/' target='_blank'>").html("<h3> Link to Deployed Site!"),
+              repo: $("<a href='https://github.com/Rhardin94/Office-Trivia' target='_blank'>").html("<h3> Link to Repo! </h3>")
+          }
         ];
         /*let index = Math.floor(Math.random() * pastProjects.length);
         tempArray.push(displayedProject);
@@ -102,7 +108,7 @@ $(document).ready(function () {
         $(".nameInput").val("");
         $(".emailInput").val("");
         $(".messageInput").val("");
-        },3000);
+        }, 3000);
         $(".wrapper").show();
         $("footer").show();
     })
