@@ -37,6 +37,12 @@ $(document).ready(function () {
   function projectSwap() {
     //const tempArray = [];
     const pastProjects = [
+      moviews = {
+        image: $("<img src='assets/images/home_page.png'>"),
+        name: $("<h2>").text("Moviews!"),
+        deployed: $("<a href='https://moviews-team5.herokuapp.com/' target='_blank'>").html("<h3> Link to Deployed Site! </h3>"),
+        repo: $("<a href='https://github.com/Rhardin94/Moviews' target='_blank'>").html("<h3> Link to Repo! </h3>")
+      },
       burgerMeister = {
         image: $("<img src='assets/images/burger.png'>"),
         name: $("<h2>").text("Burger Meister!"),
