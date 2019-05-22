@@ -12,8 +12,6 @@ const mailer = require("nodemailer").createTransport({
     pass: process.env.GMAIL_PASSWORD
   }
 });
-console.log(process.env.GMAIL_ADDRESS);
-console.log(process.env.GMAIL_PASSWORD);
 //Middleware
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
