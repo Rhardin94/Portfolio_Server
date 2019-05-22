@@ -109,7 +109,7 @@ $(document).ready(function () {
     //Something magic happens that sends me this info
     //At the moment, it clears the input fields and returns user to about page
     setTimeout(function () {
-      $(".nameInput").val("");
+      $(".subjectInput").val("");
       $(".emailInput").val("");
       $(".messageInput").val("");
     }, 3000);
