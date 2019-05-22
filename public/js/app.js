@@ -102,7 +102,7 @@ $(document).ready(function () {
   $(".submitBtn").on("click", function (event) {
     //Preventing button from refreshing page
     // event.preventDefault();
-    if ((!$(".nameInput").val()) || (!$(".emailInput").val()) || (!$(".messageInput").val())) {
+    if ((!$(".subjectInput").val()) || (!$(".emailInput").val()) || (!$(".messageInput").val())) {
       $("label").append(" (You didn't fill in all the required fields!)");
       return false;
     };

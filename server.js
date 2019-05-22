@@ -9,7 +9,7 @@ const mailer = require("nodemailer").createTransport({
   service: "Gmail",
   auth: {
     user: process.env.GMAIL_ADDRESS,
-    pass: process.env.GMAIL_PASSWORD
+    pass: process.env.GMAIL_PASSWORD,
   }
 });
 //Middleware
@@ -29,12 +29,13 @@ app.get("/contact", (req, res) => {
 app.post("/contact", (req, res) => {
   mailer.sendMail({
     from: req.body.Email,
-    to: [CONTACT_ADDRESS],
-    subject: "Nodemailer test",
+    to: CONTACT_ADDRESS,
+    subject: req.body.Subject || "[No Subject]",
     text: req.body.Message || "[No Message]",
   }, (err, info) => {
     if (err) return res.status(500).send(err);
-    res.json({success:true});
+    //res.json({success:true});
+    console.log(info);
     });
 });
 //Listener
