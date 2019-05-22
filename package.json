@@ -1,0 +1,23 @@
+{
+  "name": "My-Portfolio",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Rhardin94/My-Portfolio.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Rhardin94/My-Portfolio/issues"
+  },
+  "homepage": "https://github.com/Rhardin94/My-Portfolio#readme",
+  "dependencies": {
+    "express": "^4.17.0"
+  }
+}
