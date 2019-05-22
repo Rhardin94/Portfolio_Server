@@ -4,14 +4,16 @@ const express = require("express");
 const app = express();
 const PORT = process.env.PORT || 4500;
 const path = require("path");
-const CONTACT_ADDRESS = "emperor1194@gmail.com";
+const CONTACT_ADDRESS = "rob.j.hardin@gmail.com";
 const mailer = require("nodemailer").createTransport({
   service: "Gmail",
   auth: {
     user: process.env.GMAIL_ADDRESS,
-    pass: process.env.GMAIL_PASSWORD,
+    pass: process.env.GMAIL_PASSWORD
   }
 });
+console.log(process.env.GMAIL_ADDRESS);
+console.log(process.env.GMAIL_PASSWORD);
 //Middleware
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
@@ -30,8 +32,8 @@ app.post("/contact", (req, res) => {
   mailer.sendMail({
     from: req.body.Email,
     to: [CONTACT_ADDRESS],
-    subject: "Portfolio Contact",
-    html: req.body.Message || "[No Message]",
+    subject: "Nodemailer test",
+    text: req.body.Message || "[No Message]",
   }, (err, info) => {
     if (err) return res.status(500).send(err);
     res.json({success:true});
@@ -39,5 +41,5 @@ app.post("/contact", (req, res) => {
 });
 //Listener
 app.listen(PORT, function () {
-  console.log("Localhost listening on PORT:" + PORT);
+  console.log("server listening on PORT:" + PORT);
 });
