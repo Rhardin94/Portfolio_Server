@@ -15,18 +15,8 @@
     <title>My Portfolio</title>
   </head>
   <body>
-    <!--Displays when page is loaded, hidden once button is clicked-->
-    <div class="introDiv">
-      <h1 class="myName">Robert Hardin</h1>
-      <br>
-      <h2 class="mySkill">Full-Stack Web Developer</h2>
-      <br>
-      <button class="aboutBtn animated pulse slow infinite">
-        <h3>Get to know me!</h3>
-      </button>
-    </div>
     <!--About me that displays once button is clicked-->
-    <div class="wrapper">
+    <div class="wrapper animated fadeIn slow">
       <header class="header">
         <!--My Name and Online Links-->
         <div class="onlineInfo">
@@ -43,7 +33,7 @@
               target="_blank">Click to open PDF</a></h3>
               &#124;          
           <button class="contactBtn animated pulse slow infinite">
-            <h3>Contact Me!</h3>
+            <a class="contactBtn" href="/contact"><h3>Contact Me!</h3></a>
           </button>
         </div>
       </header>
@@ -68,47 +58,6 @@
       <div class="portfolio">
         <h1 class="divTitle">Portfolio</h1>
         <div class="currentProject"></div>
-      </div>
-    </div>
-    <div class="contactDiv">
-      <header class="header">
-        <!--My Name-->
-        <div class="onlineInfo2">
-            <h1 class="name">Robert Hardin</h1>
-            <a href="https://github.com/Rhardin94" target="_blank">
-              <h3>Link to GitHub!</h3>
-            </a>
-            &#124;
-            <a href="https://www.linkedin.com/in/robert-hardin-69b093177/" target="_blank">
-              <h3>Link to LinkedIn!</h3>
-            </a>
-            &#124;
-            <h3>Resume: 
-              <a href="https://Rhardin94.github.io/My-Portfolio/assets/images/Robert Developer Resume.pdf" target="_blank">Click to open PDF</a>
-            </h3>
-          </div>
-      </header>
-      <div class="contactForm">
-        <button class="homeBtn animated pulse slow infinite">
-          <h3 class="animated pulse slow infinite">Back to home</h3>
-        </button>
-        <form>
-          <label for="nameInput">Name</label>
-          <br>
-          <input type="text" name="Name" class="nameInput" placeholder="e.g Johnny Appleseed">
-          <br>
-          <label for="emailInput">Email</label>
-          <br>
-          <input type="text" name="Email" class="emailInput" placeholder="someonetoknow@gmail.com">
-          <br>
-          <label for="messageInput">Message or Comment</label>
-          <br>
-          <textarea type="text" name="Message" class="messageInput" rows="7" placeholder="I have a message..."></textarea>
-          <br>
-          <button type="submit" class="submitBtn animated pulse slow infinite">
-            <h3>Send</h3>
-          </button>
-        </form>
       </div>
     </div>
     <footer> Robert Hardin &copy; 2019</footer>

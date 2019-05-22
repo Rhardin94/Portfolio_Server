@@ -2,8 +2,6 @@
 $(document).ready(function () {
   //Hides about me content until button click
   $(".wrapper").hide();
-  //Hides contact me content until button click
-  $(".contactDiv").hide();
   //Assigning variables to each about div and hiding it for animation later
   const aboutMe = $(".aboutMe");
   aboutMe.hide();
@@ -12,19 +10,16 @@ $(document).ready(function () {
   const footer = $("footer");
   footer.hide();
   //On click that migrates HTML to about me content by hiding introDiv, showing about div (wrapper) and setting timeouts for animation
-  $(".aboutBtn").on("click", function () {
-    $(".introDiv").hide();
     $(".wrapper").addClass("animated fadeIn slow");
     $(".wrapper").show();
     setTimeout(aboutDiv, 1000);
     setTimeout(portfolioDiv, 2000);
     setTimeout(footerMagic, 3000);
-  });
   function aboutDiv() {
     aboutMe.addClass("animated fadeInRight slow");
     aboutMe.show();
   };
-  setTimeout(projectSwap, 3000);
+  setTimeout(projectSwap, 2000);
   function portfolioDiv() {
     portfolio.addClass("animated fadeInRight slow");
     portfolio.show();
@@ -80,9 +75,7 @@ $(document).ready(function () {
         repo: $("<a href='https://github.com/Rhardin94/Office-Trivia' target='_blank'>").html("<h3> Link to Repo! </h3>")
       }
     ];
-    /*let index = Math.floor(Math.random() * pastProjects.length);
-    tempArray.push(displayedProject);
-    pastProjects.splice(index, 1);*/
+    //Loops through projects array and displays each one inside portfolioDiv
     for (let i = 0; i < pastProjects.length; i++) {
       let displayedProject = pastProjects[i];
       const currentProject = $("<div>").attr("class", "animated fadeIn slow");
@@ -108,32 +101,17 @@ $(document).ready(function () {
   //On-click that will eventually submit info to me and also navigates back to homepage
   $(".submitBtn").on("click", function (event) {
     //Preventing button from refreshing page
-    event.preventDefault();
+    // event.preventDefault();
     if ((!$(".nameInput").val()) || (!$(".emailInput").val()) || (!$(".messageInput").val())) {
       $("label").append(" (You didn't fill in all the required fields!)");
       return false;
     };
     //Something magic happens that sends me this info
     //At the moment, it clears the input fields and returns user to about page
-    $(".contactDiv").hide();
     setTimeout(function () {
       $(".nameInput").val("");
       $(".emailInput").val("");
       $(".messageInput").val("");
     }, 3000);
-    $(".wrapper").show();
-    $("footer").show();
-  })
-  //On-Click to navigate away from contact page
-  $(".homeBtn").on("click", function (event) {
-    //Preventing button from refreshing page in-case it tries to.
-    event.preventDefault();
-    //Clears the input fields and returns user to about page
-    $(".contactDiv").hide();
-    $(".nameInput").val("");
-    $(".emailInput").val("");
-    $(".messageInput").val("");
-    $(".wrapper").show();
-    $("footer").show();
   });
 });
