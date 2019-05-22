@@ -4,7 +4,7 @@ const express = require("express");
 const app = express();
 const PORT = process.env.PORT || 4500;
 const path = require("path");
-const CONTACT_ADDRESS = "rob.j.hardin@gmail.com";
+const CONTACT_ADDRESS = process.env.RECEIVING_ADDRESS;
 const mailer = require("nodemailer").createTransport({
   service: "Gmail",
   auth: {
