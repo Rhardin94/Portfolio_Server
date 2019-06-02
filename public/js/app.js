@@ -32,6 +32,12 @@ $(document).ready(function () {
   function projectSwap() {
     //const tempArray = [];
     const pastProjects = [
+      PipPip_Newsio = {
+        image: $("<img src='assets/images/homepage.jpg'>"),
+        name: $("<h2>").text("PipPip Newsio"),
+        deployed: $("<a href='https://dry-mesa-18962.herokuapp.com/' target='_blank'>").html("<h3> Link to Deployed Site </h3>"),
+        repo: $("<a href='https://github.com/Rhardin94/PipPip_Newsio/tree/master' target='_blank'>").html("<h3> Link to Repo </h3>")
+      },
       moviews = {
         image: $("<img src='assets/images/home_page.png'>"),
         name: $("<h2>").text("Moviews!"),
