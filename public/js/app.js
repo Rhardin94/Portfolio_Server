@@ -32,6 +32,12 @@ $(document).ready(function () {
   function projectSwap() {
     //const tempArray = [];
     const pastProjects = [
+      clickEmDead = {
+        image: $("<img src='assets/images/Home.jpg'>"),
+        name: $("<h2>").text("ClickEmDead"),
+        deployed: $("<a href='https://rhardin94.github.io/ClickEmDead/' target='_blank'>").html("<h3> Link to Deployed Site </h3>"),
+        repo: $("<a href='https://github.com/Rhardin94/ClickEmDead' target='_blank'>").html("<h3> Link to Repo </h3>")
+      },
       PipPip_Newsio = {
         image: $("<img src='assets/images/homepage.jpg'>"),
         name: $("<h2>").text("PipPip Newsio"),
