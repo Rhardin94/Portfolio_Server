@@ -26,6 +26,9 @@ app.post("/contact", (req, res) => {
   //CORS solution found here: https://stackoverflow.com/questions/47523265/jquery-ajax-no-access-control-allow-origin-header-is-present-on-the-requested/47525511
   res.header("Access-Control-Allow-Origin", "*");
   res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+  if ((req.body.Email.val("")) || (req.body.Message.val(""))) {
+    return res.status(404).end();
+  };
   mailer.sendMail({
     from: req.body.Email,
     to: [CONTACT_ADDRESS],
