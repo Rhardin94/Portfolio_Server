@@ -30,13 +30,8 @@ app.post("/contact", (req, res) => {
     text: "From: " + req.body.email + " Message: " + req.body.message || "[No Message]",
     html: "From: " + req.body.email + "<br>" + " Message: " + req.body.message || "[No Message]",
   }, (err, info) => {
-<<<<<<< HEAD
-    if (err) return res.status(500).send(err);
-    res.redirect("/index");
-=======
     if (err) return res.status(500).end();
     res.status(200).end();
->>>>>>> develop
     console.log(info);
     });
 });
