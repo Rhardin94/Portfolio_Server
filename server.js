@@ -22,12 +22,6 @@ app.use(express.static("public"));
 app.get("/", (req, res) => {
   res.sendFile(path.join(__dirname, "home.html"));
 });
-app.get("/index", (req, res) => {
-  res.sendFile(path.join(__dirname, "index.html"));  
-});
-app.get("/contact", (req, res) => {
-  res.sendFile(path.join(__dirname, "contact.html"));
-});
 app.post("/contact", (req, res) => {
   mailer.sendMail({
     from: req.body.Email,
@@ -35,8 +29,9 @@ app.post("/contact", (req, res) => {
     subject: "Nodemailer test",
     text: req.body.Message || "[No Message]",
   }, (err, info) => {
-    if (err) return res.status(500).send(err);
-    res.json({success:true});
+    if (err) return res.status(500).end();
+    res.status(200).end();
+    console.log(info);
     });
 });
 //Listener
