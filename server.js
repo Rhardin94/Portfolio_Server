@@ -26,19 +26,20 @@ app.post("/contact", (req, res) => {
   //CORS solution found here: https://stackoverflow.com/questions/47523265/jquery-ajax-no-access-control-allow-origin-header-is-present-on-the-requested/47525511
   res.header("Access-Control-Allow-Origin", "*");
   res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
-  if ((req.body.Email.val("")) || (req.body.Message.val(""))) {
-    return false;
-  };
+  if ((!req.body.Email) || (!req.body.Message)) {
+    return res.status(404).end();
+  } else {
   mailer.sendMail({
     from: req.body.Email,
     to: [CONTACT_ADDRESS],
-    subject: "Nodemailer test",
+    subject: req.body.Subject,
     text: `From: ${req.body.Email}` + "\n" + `Message:  ${req.body.Message}` || "[No Message]",
   }, (err, info) => {
     if (err) return res.status(500).end();
     res.send(200).end();
     console.log(info);
     });
+  }
 });
 //Listener
 app.listen(PORT, function () {
