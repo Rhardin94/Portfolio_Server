@@ -1,3 +1,2 @@
-# My-Portfolio is my Personal Portfolio
-## Link to page here: "https://afternoon-inlet-46699.herokuapp.com/"
-## This site includes links to some past project repos, my LinkedIn Profile, Resume, as well as my contact information.
+# My-Portfolio is the back-end to https://rhardin94.github.io/
+## The server is hosted on heroku for nodemailer functionality.

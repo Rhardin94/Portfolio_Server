@@ -22,12 +22,6 @@ app.use(express.static("public"));
 app.get("/", (req, res) => {
   res.sendFile(path.join(__dirname, "home.html"));
 });
-app.get("/index", (req, res) => {
-  res.sendFile(path.join(__dirname, "index.html"));  
-});
-app.get("/contact", (req, res) => {
-  res.sendFile(path.join(__dirname, "contact.html"));
-});
 app.post("/contact", (req, res) => {
   mailer.sendMail({
     from: req.body.email,
@@ -36,8 +30,13 @@ app.post("/contact", (req, res) => {
     text: "From: " + req.body.email + " Message: " + req.body.message || "[No Message]",
     html: "From: " + req.body.email + "<br>" + " Message: " + req.body.message || "[No Message]",
   }, (err, info) => {
+<<<<<<< HEAD
     if (err) return res.status(500).send(err);
     res.redirect("/index");
+=======
+    if (err) return res.status(500).end();
+    res.status(200).end();
+>>>>>>> develop
     console.log(info);
     });
 });
