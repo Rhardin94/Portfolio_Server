@@ -9,11 +9,11 @@ const mailer = require("nodemailer").createTransport({
   service: "Gmail",
   auth: {
     user: process.env.GMAIL_ADDRESS,
-    pass: process.env.GMAIL_PASSWORD
+    pass: process.env.GMAIL_PASS
   }
 });
 console.log(process.env.GMAIL_ADDRESS);
-console.log(process.env.GMAIL_PASSWORD);
+console.log(process.env.GMAIL_PASS);
 //Middleware
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
