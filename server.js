@@ -9,7 +9,7 @@ const mailer = require("nodemailer").createTransport({
   service: "Gmail",
   auth: {
     user: process.env.GMAIL_ADDRESS,
-    pass: process.env.GMAIL_PASS,
+    pass: process.env.GMAIL_PASS
   }
 });
 console.log(process.env.GMAIL_ADDRESS);
