@@ -31,7 +31,7 @@ app.post("/contact", (req, res) => {
     html: "From: " + req.body.email + "<br>" + " Message: " + req.body.message || "[No Message]",
   }, (err, info) => {
     if (err) return res.status(500).end();
-    res.status(200).end();
+    res.redirect("rhardin94.github.io");
     console.log(info);
     });
 });
