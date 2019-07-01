@@ -27,7 +27,7 @@ app.post("/contact", (req, res) => {
   res.header("Access-Control-Allow-Origin", "*");
   res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
   if ((req.body.Email.val("")) || (req.body.Message.val(""))) {
-    return res.status(404).end();
+    return false;
   };
   mailer.sendMail({
     from: req.body.Email,
