@@ -30,7 +30,7 @@ app.post("/contact", (req, res) => {
     text: req.body.Message || "[No Message]",
   }, (err, info) => {
     if (err) return res.status(500).end();
-    res.redirect("rhardin94.github.io");
+    res.status(200).end();
     console.log(info);
     });
 });
