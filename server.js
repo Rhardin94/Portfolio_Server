@@ -1,5 +1,5 @@
 //Dependencies
-const dotenv = require("dotenv");
+require("dotenv").config();
 const express = require("express");
 const app = express();
 const PORT = process.env.PORT || 4500;
@@ -30,7 +30,7 @@ app.post("/contact", (req, res) => {
     text: req.body.Message || "[No Message]",
   }, (err, info) => {
     if (err) return res.status(500).end();
-    res.status(200).end();
+    res.redirect("rhardin94.github.io");
     console.log(info);
     });
 });
