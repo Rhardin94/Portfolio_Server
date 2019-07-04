@@ -23,6 +23,8 @@ app.get("/", (req, res) => {
   res.sendFile(path.join(__dirname, "home.html"));
 });
 app.get("/wake", (req, res) => {
+  res.header("Access-Control-Allow-Origin", "*");
+  res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
   if (err) res.status(500).end();
   res.send("I'm awake").end();
 });
