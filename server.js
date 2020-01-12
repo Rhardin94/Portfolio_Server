@@ -41,7 +41,7 @@ app.post("/contact", (req, res) => {
     text: `From: ${req.body.Email}` + "\n" + `Message:  ${req.body.Message}` || "[No Message]",
   }, (err, info) => {
     if (err) return res.status(500).end();
-    res.send(200).end();
+    res.send("Email went through!").end();
     console.log(info);
     });
   }
